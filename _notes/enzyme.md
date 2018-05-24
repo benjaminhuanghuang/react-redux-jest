@@ -7,7 +7,7 @@ Create src/setupTests.js to config enzyme. Jest will find and use it.
 ## Enzyme API
 - shallow: render **just** given component and none of its children.
 - render: render given component and return plain HTML
-- mount: 
+- mount: full simulation. can not accsss event in form submit handler function if using shallow.
 
 
 ## Check component existing or not
