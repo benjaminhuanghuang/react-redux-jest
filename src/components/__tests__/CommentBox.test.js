@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 
 import CommentBox from '../CommentBox';
+import Root from '../../Root';
 
 
 // Use 'describe' to group together similar tests
@@ -9,7 +10,7 @@ describe('App', () => {
     let wrapped;
 
     beforeEach(() => {
-        wrapped = mount(<CommentBox />);
+        wrapped = mount(<Root><CommentBox /></Root>);
     });
     afterEach(() => {
         wrapped.unmount();
