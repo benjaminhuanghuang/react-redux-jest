@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import CommentBox from '../CommentBox';
 
@@ -9,7 +9,7 @@ describe('App', () => {
     let wrapped;
 
     beforeEach(() => {
-        wrapped = shallow(<CommentBox />);
+        wrapped = mount(<CommentBox />);
     });
     afterEach(() => {
         wrapped.unmount();
@@ -33,6 +33,7 @@ describe('App', () => {
         });
 
         it('when form is submitted, text area gets emptied', () => {
+            // Can not work if use "shallow" function !
             wrapped.find('form').simulate('submit');
             wrapped.update();
             expect(wrapped.find('textarea').prop('value')).toEqual('');
