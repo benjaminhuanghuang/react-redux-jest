@@ -6,7 +6,7 @@ import Root from '../../Root';
 
 
 // Use 'describe' to group together similar tests
-describe('App', () => {
+describe('CommentBox', () => {
     let wrapped;
 
     beforeEach(() => {
